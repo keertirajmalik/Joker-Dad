@@ -17,20 +17,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         jokeManager.delegate = self
+        jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
     }
 
     @IBAction func showNewJoke(_ sender: UIButton) {
-        jokeManager.fetchDadJoke(with: "https://icanhazdadjoke.com")
+        jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
     }
 
 }
 
 extension ViewController: JokeManagerDelegate {
-    func fetchNewDadJoke(_ jokeManager: JokeManager, joke: JokeModel) {
+    func fetchDadJoke(_ jokeManager: JokeManager, joke: JokeModel) {
         DispatchQueue.main.async {
             self.jokeView.text = joke.joke
         }
     }
-    
-    
 }
