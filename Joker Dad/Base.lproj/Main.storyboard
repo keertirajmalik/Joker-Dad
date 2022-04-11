@@ -17,24 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joker Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noQ-uJ-zq8">
-                                <rect key="frame" x="139" y="69" width="136" height="37"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <rect key="frame" x="85.5" y="69" width="243" height="71"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L12-Ts-OOk">
                                 <rect key="frame" x="100" y="781" width="214" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Hit me Another joke"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Hit me Another joke" titleAlignment="center"/>
                                 <connections>
                                     <action selector="showNewJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgh-he-DNp"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diX-Az-OTK" userLabel="Joke view">
-                                <rect key="frame" x="50" y="196" width="314" height="500"/>
+                                <rect key="frame" x="50" y="190" width="314" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="gs0-i5-GC3"/>
+                                    <constraint firstAttribute="height" constant="400" id="gs0-i5-GC3"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
@@ -46,7 +45,7 @@
                         <constraints>
                             <constraint firstItem="diX-Az-OTK" firstAttribute="centerX" secondItem="L12-Ts-OOk" secondAttribute="centerX" id="23K-gJ-n0M"/>
                             <constraint firstItem="noQ-uJ-zq8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tb-If-HMp"/>
-                            <constraint firstItem="diX-Az-OTK" firstAttribute="top" secondItem="noQ-uJ-zq8" secondAttribute="bottom" constant="90" id="B6X-hB-91q"/>
+                            <constraint firstItem="diX-Az-OTK" firstAttribute="top" secondItem="noQ-uJ-zq8" secondAttribute="bottom" constant="50" id="B6X-hB-91q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L12-Ts-OOk" secondAttribute="bottom" constant="50" id="BSg-aj-0aB"/>
                             <constraint firstItem="diX-Az-OTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OZQ-LI-vQe"/>
                             <constraint firstItem="noQ-uJ-zq8" firstAttribute="centerX" secondItem="diX-Az-OTK" secondAttribute="centerX" id="RMY-pD-E5j"/>
