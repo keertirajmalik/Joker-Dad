@@ -11,7 +11,6 @@
 		33F86345280414A600BE4489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86344280414A600BE4489 /* SceneDelegate.swift */; };
 		33F86347280414A600BE4489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86346280414A600BE4489 /* ViewController.swift */; };
 		33F8634A280414A600BE4489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F86348280414A600BE4489 /* Main.storyboard */; };
-		33F8634D280414A600BE4489 /* Joker_Dad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33F8634B280414A600BE4489 /* Joker_Dad.xcdatamodeld */; };
 		33F8634F280414AD00BE4489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F8634E280414AD00BE4489 /* Assets.xcassets */; };
 		33F86352280414AD00BE4489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F86350280414AD00BE4489 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		33F86344280414A600BE4489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		33F86346280414A600BE4489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33F86349280414A600BE4489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33F8634C280414A600BE4489 /* Joker_Dad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Joker_Dad.xcdatamodel; sourceTree = "<group>"; };
 		33F8634E280414AD00BE4489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F86351280414AD00BE4489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33F86353280414AD00BE4489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				33F8634E280414AD00BE4489 /* Assets.xcassets */,
 				33F86350280414AD00BE4489 /* LaunchScreen.storyboard */,
 				33F86353280414AD00BE4489 /* Info.plist */,
-				33F8634B280414A600BE4489 /* Joker_Dad.xcdatamodeld */,
 			);
 			path = "Joker Dad";
 			sourceTree = "<group>";
@@ -142,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F86347280414A600BE4489 /* ViewController.swift in Sources */,
-				33F8634D280414A600BE4489 /* Joker_Dad.xcdatamodeld in Sources */,
 				33F86343280414A600BE4489 /* AppDelegate.swift in Sources */,
 				33F86345280414A600BE4489 /* SceneDelegate.swift in Sources */,
 			);
@@ -362,19 +358,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		33F8634B280414A600BE4489 /* Joker_Dad.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				33F8634C280414A600BE4489 /* Joker_Dad.xcdatamodel */,
-			);
-			currentVersion = 33F8634C280414A600BE4489 /* Joker_Dad.xcdatamodel */;
-			path = Joker_Dad.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 33F86337280414A500BE4489 /* Project object */;
 }
