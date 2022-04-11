@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C321E8280436D800187785 /* jokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C321E7280436D800187785 /* jokeManager.swift */; };
 		33F86343280414A600BE4489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86342280414A600BE4489 /* AppDelegate.swift */; };
 		33F86345280414A600BE4489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86344280414A600BE4489 /* SceneDelegate.swift */; };
 		33F86347280414A600BE4489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F86346280414A600BE4489 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C321E7280436D800187785 /* jokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokeManager.swift; sourceTree = "<group>"; };
 		33F8633F280414A600BE4489 /* Joker Dad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joker Dad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F86342280414A600BE4489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F86344280414A600BE4489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33C321E6280436C200187785 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33C321E7280436D800187785 /* jokeManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		33F86336280414A500BE4489 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		33F86341280414A600BE4489 /* Joker Dad */ = {
 			isa = PBXGroup;
 			children = (
+				33C321E6280436C200187785 /* Model */,
 				33F86342280414A600BE4489 /* AppDelegate.swift */,
 				33F86344280414A600BE4489 /* SceneDelegate.swift */,
 				33F86346280414A600BE4489 /* ViewController.swift */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C321E8280436D800187785 /* jokeManager.swift in Sources */,
 				33F86347280414A600BE4489 /* ViewController.swift in Sources */,
 				33F86343280414A600BE4489 /* AppDelegate.swift in Sources */,
 				33F86345280414A600BE4489 /* SceneDelegate.swift in Sources */,
