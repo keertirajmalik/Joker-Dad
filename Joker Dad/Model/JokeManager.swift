@@ -43,7 +43,7 @@ struct JokeManager {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(JokeData.self, from: jokeData)
-            let joke = decodedData.joke
+            let joke = processJoke(joke: decodedData.joke)
             
             return JokeModel(joke: joke)
             
@@ -52,5 +52,13 @@ struct JokeManager {
             //            delegate?.didFailWithError(error: error)
             return nil
         }
+    }
+    
+    func processJoke(joke:String) -> String {
+        let jokes =  joke.components(separatedBy: "?")
+        if jokes.count > 1 {
+            return jokes[0] + " ? " + "\n\n" + jokes[1]
+        }
+        return joke
     }
 }

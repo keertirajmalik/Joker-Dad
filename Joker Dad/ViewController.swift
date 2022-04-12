@@ -28,6 +28,8 @@ class ViewController: UIViewController {
 
 extension ViewController: JokeManagerDelegate {
     func fetchDadJoke(_ jokeManager: JokeManager, joke: JokeModel) {
+        
+        
         DispatchQueue.main.async {
             self.jokeView.text = joke.joke
         }
