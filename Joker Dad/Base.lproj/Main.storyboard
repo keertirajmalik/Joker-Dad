@@ -57,6 +57,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardView" destination="2q4-dW-IHf" id="OW2-b9-sxA"/>
                         <outlet property="jokeView" destination="mbU-X7-BTg" id="Ogs-2V-2lc"/>
                     </connections>
                 </viewController>
