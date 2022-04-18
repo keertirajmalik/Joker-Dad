@@ -38,27 +38,21 @@
                                     <constraint firstItem="mbU-X7-BTg" firstAttribute="leading" secondItem="2q4-dW-IHf" secondAttribute="leading" constant="10" id="vnB-dM-utG"/>
                                     <constraint firstItem="mbU-X7-BTg" firstAttribute="top" secondItem="2q4-dW-IHf" secondAttribute="top" id="xEd-LS-kde"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L12-Ts-OOk">
-                                <rect key="frame" x="100" y="796" width="152" height="16"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Hit me Another joke" titleAlignment="center"/>
                                 <connections>
                                     <action selector="showNewJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgh-he-DNp"/>
                                 </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="noQ-uJ-zq8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tb-If-HMp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L12-Ts-OOk" secondAttribute="bottom" constant="50" id="BSg-aj-0aB"/>
                             <constraint firstItem="2q4-dW-IHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nl6-sx-kKI"/>
                             <constraint firstItem="2q4-dW-IHf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O90-va-Wl7"/>
                             <constraint firstItem="2q4-dW-IHf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="Qwm-07-ATJ"/>
                             <constraint firstItem="noQ-uJ-zq8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Wab-Ex-Bhe"/>
-                            <constraint firstItem="L12-Ts-OOk" firstAttribute="top" secondItem="2q4-dW-IHf" secondAttribute="bottom" constant="100" id="c0j-tu-WJi"/>
                             <constraint firstItem="2q4-dW-IHf" firstAttribute="centerX" secondItem="noQ-uJ-zq8" secondAttribute="centerX" id="cwp-LW-Inj"/>
-                            <constraint firstItem="L12-Ts-OOk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dOS-iS-sOV"/>
                         </constraints>
                     </view>
                     <connections>

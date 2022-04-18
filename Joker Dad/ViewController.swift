@@ -22,6 +22,11 @@ class ViewController: UIViewController {
     @IBAction func showNewJoke(_ sender: UIButton) {
         jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
     }
+    
+    
+//    @IBAction func showNewJoke(_ sender: UIButton) {
+//        jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
+//    }
 
 }
 
