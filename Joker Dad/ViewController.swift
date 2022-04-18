@@ -19,8 +19,18 @@ class ViewController: UIViewController {
         jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
     }
 
-    @IBAction func showNewJoke(_ sender: UIButton) {
-        jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
+    @IBAction func showNewJoke(_ sender: UIPanGestureRecognizer) {
+        let card = sender.view!
+        let point = sender.translation(in: view)
+        card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+        
+        if sender.state == UIGestureRecognizer.State.ended {
+            UIView.animate(withDuration: 0.2) {
+                card.center = self.view.center
+            }
+        }
+        
+        
     }
     
     

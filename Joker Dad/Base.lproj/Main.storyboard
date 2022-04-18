@@ -32,6 +32,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mbU-X7-BTg" secondAttribute="trailing" constant="10" id="Bdl-x2-dXZ"/>
                                     <constraint firstAttribute="bottom" secondItem="mbU-X7-BTg" secondAttribute="bottom" id="glk-vb-SqE"/>
@@ -39,7 +40,7 @@
                                     <constraint firstItem="mbU-X7-BTg" firstAttribute="top" secondItem="2q4-dW-IHf" secondAttribute="top" id="xEd-LS-kde"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="showNewJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgh-he-DNp"/>
+                                    <outletCollection property="gestureRecognizers" destination="aTr-l0-u4J" appends="YES" id="TkF-b7-DLB"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -60,6 +61,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aTr-l0-u4J">
+                    <connections>
+                        <action selector="showNewJoke:" destination="BYZ-38-t0r" id="i3o-UT-vB3"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-691" y="-147"/>
         </scene>
