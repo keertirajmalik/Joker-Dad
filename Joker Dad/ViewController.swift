@@ -8,9 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var jokeView: UITextView!
     
+    @IBOutlet var jokeView: UILabel!
     var jokeManager = JokeManager()
     
     override func viewDidLoad() {
