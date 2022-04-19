@@ -15,9 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        jokeManager.delegate = self
-        jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
+
+        getNewJokeCard()
     }
     
     @IBAction func showNewJoke(_ sender: UIPanGestureRecognizer) {
@@ -33,14 +32,14 @@ class ViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                     card.alpha = 0
                 }
-                showNewJokeCard()
+                getNewJokeCard()
                 
             } else if card.center.x > (view.frame.width - 75) {
                 UIView.animate(withDuration: 0.3) {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 }
-                showNewJokeCard()
+                getNewJokeCard()
             }
             
             // If the card moved from centre once finger is lifted the card will snapped back to the centre again.
@@ -50,18 +49,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func showNewJokeCard() {
-            self.cardView.center = self.view.center
-            self.cardView.alpha = 1
-            self.jokeManager.fetchJoke(with: "https://icanhazdadjoke.com")
-    }
-}
-
-extension ViewController: JokeManagerDelegate {
-    func fetchDadJoke(_ jokeManager: JokeManager, joke: JokeModel) {
-        
-        DispatchQueue.main.async {
-            self.jokeView.text = joke.joke
+    func getNewJokeCard() {
+        Task{
+            do {
+                let joke = try await jokeManager.fetchJoke()
+                self.cardView.center = self.view.center
+                self.cardView.alpha = 1
+                self.jokeView.text = joke.joke
+            } catch {
+                fatalError()
+            }
         }
     }
 }
