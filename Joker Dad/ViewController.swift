@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Network
 
 class ViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         getNewJokeCard()
     }
     
@@ -50,15 +51,40 @@ class ViewController: UIViewController {
     }
     
     func getNewJokeCard() {
-        Task{
-            do {
-                let joke = try await jokeManager.fetchJoke()
-                self.cardView.center = self.view.center
-                self.cardView.alpha = 1
-                self.jokeView.text = joke.joke
-            } catch {
-                fatalError()
+        let monitor = NWPathMonitor()
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                Task{
+                    do {
+                        let joke = try await self.jokeManager.fetchJoke()
+                        self.cardView.center = self.view.center
+                        self.cardView.alpha = 1
+                        self.jokeView.text = self.jokeManager.processJoke(joke: joke.joke)
+                    } catch {
+                        fatalError()
+                    }
+                }
+                
+            } else {
+                DispatchQueue.main.async {
+                    self.showAlert()
+                    self.cardView.center = self.view.center
+                    self.cardView.alpha = 1
+                    self.jokeView.text = "No internet \n \n  No joke for you."
+                }
             }
         }
+        
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        
+        monitor.cancel()
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "No internet", message: "connect to internet to get more dad jokes", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        self.present(alert, animated: true)
     }
 }
