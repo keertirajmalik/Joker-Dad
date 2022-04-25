@@ -50,7 +50,6 @@
 			children = (
 				33C321E9280439E400187785 /* JokeModel.swift */,
 				33C321EB28043D3900187785 /* JokeData.swift */,
-				3356877128044CB1006CDC51 /* JokeManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,6 +77,7 @@
 				33F86342280414A600BE4489 /* AppDelegate.swift */,
 				33F86344280414A600BE4489 /* SceneDelegate.swift */,
 				33F86346280414A600BE4489 /* ViewController.swift */,
+				3356877128044CB1006CDC51 /* JokeManager.swift */,
 				33F86348280414A600BE4489 /* Main.storyboard */,
 				334226C3280D446B00886D42 /* CardView.swift */,
 				33F8634E280414AD00BE4489 /* Assets.xcassets */,
