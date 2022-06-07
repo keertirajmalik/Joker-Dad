@@ -8,11 +8,10 @@
 import UIKit
 import Network
 
-class ViewController: UIViewController {
+class JokeVC: UIViewController {
     
     @IBOutlet var jokeView: UILabel!
     @IBOutlet var cardView: CardView!
-    var jokeManager = JokeManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,19 +51,20 @@ class ViewController: UIViewController {
     
     func getNewJokeCard() {
         let monitor = NWPathMonitor()
+        var joke: String?
         
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
-                Task{
-                    do {
-                        let joke = try await self.jokeManager.fetchJoke()
-                        self.cardView.center = self.view.center
-                        self.cardView.alpha = 1
-                        self.jokeView.text = self.jokeManager.processJoke(joke: joke.joke)
-                    } catch {
-                        fatalError()
+                JokeResource().fetchJoke(completionHandler: { result in
+                    if result != nil {
+                        joke = result?.joke
+                        DispatchQueue.main.async {
+                            self.cardView.center = self.view.center
+                            self.cardView.alpha = 1
+                            self.jokeView.text = joke?.processJoke()
+                        }
                     }
-                }
+                })
                 
             } else {
                 DispatchQueue.main.async {
