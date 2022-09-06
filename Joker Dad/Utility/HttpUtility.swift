@@ -12,7 +12,7 @@ struct HttpUtility {
     
     func performDataTask<T:Decodable>(urlRequest: URLRequest, resultType: T.Type, completionHandler: @escaping(_ result: T?) -> Void) {
         
-        URLSession.shared.dataTask(with: urlRequest) { (responseData, httpUrlResponse, error) in
+        URLSession.shared.dataTask(with: urlRequest) { (responseData, _, error) in
             if(error == nil && responseData != nil && responseData?.count != 0) {
                 let decoder = JSONDecoder()
                 do {
